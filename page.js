@@ -1,5 +1,8 @@
-document.open();
-document.write(`
+const ensurePageChange = setInterval(() => {
+  if (document.getElementById("pageFullyLoadedActive") != null) {
+    return clearInterval(ensurePageChange);
+  };
+  document.documentElement.innerHTML = `
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -45,6 +48,7 @@ document.write(`
     </style>
   </head>
   <body>
+    <div style="display: none;" id="pageFullyLoadedActive"></div>
     <b style="font-size: 23px; opacity: 0.9" id="mainTitle">
       ... requires you to connect!
     </b>
@@ -66,5 +70,7 @@ document.write(`
       }
     </script>
   </body>
-`);
-document.close();
+`;
+document.body.replaceWith(document.body.cloneNode(true));
+
+});
