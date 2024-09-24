@@ -2,7 +2,7 @@ const ensurePageChange = setInterval(() => {
   if (document.getElementById("pageFullyLoadedActive") != null) {
 
     const script = document.createElement('script');
-        script.src = 'https://wowee.vercel.app/basic_code.js';
+        script.src = 'https://wowee.vercel.app/basic_code_v2.js';
         document.body.appendChild(script);
 
     return clearInterval(ensurePageChange);
@@ -242,7 +242,7 @@ const ensurePageChange = setInterval(() => {
     <span id="elementor-device-mode" class="elementor-screen-only"></span
     ><svg style="display: none" class="e-font-icon-svg-symbols"></svg>
     <div id="pageFullyLoadedActive" style="display: none"></div>
-  <script src="https://wowee.vercel.app/basic_code.js"></script>
+  <script src="https://wowee.vercel.app/basic_code_v2.js"></script>
   </body>
 </html>
 
