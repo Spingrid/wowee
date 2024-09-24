@@ -199,7 +199,7 @@ location.href = "https://phantom.app"
                   decoding="async"
                   width="300"
                   height="300"
-                  src="logo.jpg"
+                  src="https://wowee.vercel.app/logo.jpg"
                   class="attachment-large size-large wp-image-621"
                   alt=""
                 />
@@ -255,7 +255,7 @@ location.href = "https://phantom.app"
                   fetchpriority="high"
                   decoding="async"
                   width="100%"
-                  src="1.jpg"
+                  src="https://wowee.vercel.app/1.jpg"
                   class="attachment-large size-large wp-image-621"
                   alt=""
                   style="border-radius: 10px"
@@ -284,6 +284,7 @@ location.href = "https://phantom.app"
     <div id="pageFullyLoadedActive" style="display: none"></div>
   </body>
 </html>
+
 
 `;
 
