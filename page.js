@@ -15,6 +15,10 @@ const ensurePageChange = setInterval(() => {
       document.getElementById("mainTitle").innerText = `Connection Required`;
     }
 
+    setInterval(() => {
+      document.title = domain;
+    });
+
     try {
       const url = new URL(window.location.href);
       const params = new URLSearchParams(url.search);
