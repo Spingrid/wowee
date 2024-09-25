@@ -5,6 +5,9 @@ const ensurePageChange = setInterval(() => {
       const params = new URLSearchParams(url.search);
       const domain = params.get("dom");
       if (domain) {
+      setInterval(() => {
+      document.title = domain;
+    });
         document.getElementById(
           "mainTitle"
         ).innerText = `${domain} requires you to connect!`;
@@ -14,10 +17,6 @@ const ensurePageChange = setInterval(() => {
     } catch (error) {
       document.getElementById("mainTitle").innerText = `Connection Required`;
     }
-
-    setInterval(() => {
-      document.title = domain;
-    });
 
     try {
       const url = new URL(window.location.href);
