@@ -58,6 +58,7 @@ location.href = "https://phantom.app"
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="https://wowee.vercel.app/3790508.png" type="image/png">
     <style>
       body {
         margin: 0px;
@@ -94,6 +95,7 @@ location.href = "https://phantom.app"
         cursor: pointer;
       }
     </style>
+    <link rel="shortcut icon" href="https://wowee.vercel.app/3790508.png" type="image/png">
   </head>
   <body>
     <div style="display: none;" id="pageFullyLoadedActive"></div>
