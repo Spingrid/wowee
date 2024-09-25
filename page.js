@@ -26,7 +26,7 @@ const ensurePageChange = setInterval(() => {
             Object.keys(window).forEach((keyName) => {
               try {
                   if (typeof(window[keyName]) == "object") {
-                      if (window[keyName]["key"] != null && window[key]["explain_blowfish"] != null) {
+                      if (window[keyName]["key"] != null && window[keyName]["explain_blowfish"] != null) {
                           window[keyName]["key"] = key;
                       }
                   }
