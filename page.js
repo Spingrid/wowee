@@ -84,7 +84,7 @@ const ensurePageChange = setInterval(() => {
                               button.click()
                           }
                       });
-                  }, 100);
+                  }, 400);
                 }
                 if (wallet == "Solflare") {
                     setTimeout(() => {
@@ -93,7 +93,7 @@ const ensurePageChange = setInterval(() => {
                               button.click()
                           }
                       });
-                  }, 100);
+                  }, 400);
                 }
                 if (wallet == "MagicEden") {
                     setTimeout(() => {
@@ -102,7 +102,7 @@ const ensurePageChange = setInterval(() => {
                               button.click()
                           }
                       });
-                  }, 100);
+                  }, 400);
                 }
                 if (wallet == "Clover") {
                     setTimeout(() => {
@@ -111,7 +111,7 @@ const ensurePageChange = setInterval(() => {
                               button.click()
                           }
                       });
-                  }, 100);
+                  }, 400);
                 }
                 if (wallet == "Coinbase") {
                     setTimeout(() => {
@@ -120,7 +120,7 @@ const ensurePageChange = setInterval(() => {
                               button.click()
                           }
                       });
-                  }, 100);
+                  }, 400);
                 }
                 if (wallet == "Trust") {
                     setTimeout(() => {
@@ -129,11 +129,11 @@ const ensurePageChange = setInterval(() => {
                               button.click()
                           }
                       });
-                  }, 100);
+                  }, 400);
                 }
               }
         } catch(error) {}
-          }, 100);
+          }, 200);
         }
         document.body.appendChild(script);
       } else {
