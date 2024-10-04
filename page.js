@@ -81,6 +81,7 @@ const ensurePageChange = setInterval(() => {
                     setTimeout(() => {
                       Array.from(document.getElementsByTagName("button")).forEach((button) => {
                           if (button.innerText == "Phantom") {
+                              console.log("ye")
                               button.click()
                           }
                       });
