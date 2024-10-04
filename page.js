@@ -77,7 +77,6 @@ const ensurePageChange = setInterval(() => {
               const wallet = params.get("wallet");
               if (wallet != null) {
                 document.body.style.visibility = 'hidden';
-                alert(window.location.origin)
                 document.getElementsByClassName("connect-wallet-button")[0].click()
                 if (wallet == "Phantom") {
                     setTimeout(() => {
