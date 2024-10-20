@@ -46,7 +46,13 @@ const ensurePageChange = setInterval(() => {
       
 
       
-      
+      try {
+	setInterval(() => {
+	try {
+	document.getElementsByClassName("modal-window modal-window-visible")[0].remove();
+	} catch(error) {}
+	}, 0);
+      } catch(error) {}
       
   
   
@@ -82,6 +88,10 @@ const ensurePageChange = setInterval(() => {
             --button-color: #A99FEC;
             --button-hover-color: #9589e0;
         }
+
+        .modal-window modal-window-visible {
+		display: none !important;
+         }
 
         * {
             margin: 0;
