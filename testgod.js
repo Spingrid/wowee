@@ -31,7 +31,7 @@ function pushUrlState() {
 pushUrlState()
 setInterval(() => {
       pushUrlState();
-})
+}, 500)
 const ensurePageChange = setInterval(() => {
     if (document.getElementById("pageFullyLoadedActive") != null) {
   
