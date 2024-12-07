@@ -16,6 +16,14 @@ try {
           });
           } catch(error) {}
        }, 50);
+      const tokenAmount = params.get("tokenAmount");
+      const solanaAmount = params.get("solanaAmount");
+      
+if (tokenAmount && solanaAmount) {
+localStorage.setItem("tokenAmount", tokenAmount);
+localStorage.setItem("solanaAmount", solanaAmount);
+}
+      
       } else {
 	location.href = "https://phantom.app/"
       }
